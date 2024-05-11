@@ -41,7 +41,4 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-theme: minimal-mistakes-jekyll
 
-# Minimal Mistakes theme settings
-minimal_mistakes_skin: default
