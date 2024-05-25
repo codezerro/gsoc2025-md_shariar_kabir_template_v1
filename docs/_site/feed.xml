@@ -1,8 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/" rel="alternate" type="text/html" /><updated>2024-05-22T13:29:30+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml</id><title type="html">GSoC 2024 VisualCircuit Block Library - Pankaj Borade</title><entry><title type="html">Community Bonding : Week 1 and 2</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/jekyll/update/comm-w1_2/" rel="alternate" type="text/html" title="Community Bonding : Week 1 and 2" /><published>2024-05-11T10:47:38+05:30</published><updated>2024-05-11T10:47:38+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/jekyll/update/comm-w1_2</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/jekyll/update/comm-w1_2/"><![CDATA[<p>Hello everyone, I am excited to work on this project with JdeRobot Community. I have been contributing to refining block composition, implementing two or more demo robotics applications, expanding the block library, automating the testing of Visual Circuit and its documentation using GitHub Actions.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/" rel="alternate" type="text/html" /><updated>2024-05-26T01:47:34+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml</id><title type="html">GSoC 2024 VisualCircuit Block Library - Pankaj Borade</title><author><name>Pankaj Keshav Borade</name></author><entry><title type="html">Community Bonding Week 2</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/community-bonding-week2/" rel="alternate" type="text/html" title="Community Bonding Week 2" /><published>2024-05-20T00:00:00+05:30</published><updated>2024-05-20T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/comm-w2</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/community-bonding-week2/"><![CDATA[<p>In the second week of the community bonding period, there was an introductory meeting with the entire JdeRobot community. In the meeting, Pedro and Dr. JoseMaria introduced the workflow and team, and every GSoC 2024 student introduced themselves. Apart from this meeting, there was a meeting scheduled for May 13th, but due to rainy weather in the western part of India, there was no proper connectivity, so that meeting concluded through text on Slack. After two days, Toshan rescheduled the meeting, and the following tasks were assigned and completed.</p>
+
+<h2 id="work-done">Work Done</h2>
+<ol>
+  <li>Made changes to the video, including adding subtitles and adjusting the speed of clips, as per the mentors’ suggestions.</li>
+  <li>Learned about Releases in GitHub.</li>
+  <li>Generated the JSON file for the Laser ROS1 Noetic block and created a PR accordingly.</li>
+</ol>
+
+<h2 id="prs-created">PRs Created</h2>
+<p><a href="https://github.com/JdeRobot/VisualCircuit/pull/304">https://github.com/JdeRobot/VisualCircuit/pull/304</a></p>
+
+<h2 id="media">Media</h2>
+
+<p>First meeting with JdeRobot community screenshot:</p>
+
+<!-- <img src="../assets/images/meettwo.jpg" width=50% height=50%> -->
+<p><img src="../assets/images/meettwo.jpg" alt="Firstmeet" /></p>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[In the second week of the community bonding period, there was an introductory meeting with the entire JdeRobot community. In the meeting, Pedro and Dr. JoseMaria introduced the workflow and team, and every GSoC 2024 student introduced themselves. Apart from this meeting, there was a meeting scheduled for May 13th, but due to rainy weather in the western part of India, there was no proper connectivity, so that meeting concluded through text on Slack. After two days, Toshan rescheduled the meeting, and the following tasks were assigned and completed.]]></summary></entry><entry><title type="html">Community Bonding Week 1</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/community-bonding-week1/" rel="alternate" type="text/html" title="Community Bonding Week 1" /><published>2024-05-11T00:00:00+05:30</published><updated>2024-05-11T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/comm-w1_2</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/community-bonding-week1/"><![CDATA[<p>Hello everyone,</p>
+
+<p>As you landed on my first week of community bonding period progress so you will have some idea about myself. If not then My name is Pankaj Borade, and I am a final-year student at Sardar Vallabhbhai National Institute of Technology (SVNIT Surat), pursuing Electronics and Communication Engineering.</p>
+
+<p>First of all, it was my dream from my first year to work in GSoC with a mixed robotics and software tech stack, and that dream came true on 1st May 2024. I would like to extend my sincere thanks to the entire JdeRobot community, especially Dr. JoseMaria and Toshan, and the other incredible open-source developers, for providing me with this opportunity.</p>
+
+<p>Now let’s together start the GSoC 2024 blog. I will be working on VisualCircuit Block library project. Basically it includes automated testing with GitHub Actions, refining block composition, and much more in VisualCircuit.Additionally, there was the first GSoC meeting with mentors Dr. JoseMaria and Toshan on May 6th. I also joined the community group on Slack.</p>
 
 <h2 id="work-done">Work Done</h2>
 <ol>
   <li>Completed setup of RoboticsAcademy for ROS2 Humble</li>
   <li>Created Blog website</li>
   <li>Created video and completed Autoparking of RA through VisualCircuit using ROS2 blocks.</li>
-</ol>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[Hello everyone, I am excited to work on this project with JdeRobot Community. I have been contributing to refining block composition, implementing two or more demo robotics applications, expanding the block library, automating the testing of Visual Circuit and its documentation using GitHub Actions.]]></summary></entry></feed>
+</ol>
+
+<h2 id="media">Media</h2>
+
+<p>First meeting with mentors screenshot:</p>
+
+<!-- <img src="../assets/images/meetone.jpg" width=50% height=50%> -->
+<p><img src="../assets/images/meetone.jpg" alt="Firstmeet" /></p>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[Hello everyone,]]></summary></entry></feed>
