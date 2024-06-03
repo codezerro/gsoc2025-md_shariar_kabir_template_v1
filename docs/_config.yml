@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: GSoC 2024 VisualCircuit Block Library - Pankaj Borade
+title: GSoC 2024 VisualCircuit Block Library - JdeRobot
 email: 
 # description: >- # this means to ignore newlines until "baseurl:"
 #   # Write an awesome description for your new site here. You can edit this
@@ -23,7 +23,7 @@ baseurl: "/gsoc2024-Pankaj_Borade" # the subpath of your site, e.g. /blog
 url: "https://theroboticsclub.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: username
 github_username:  BkPankaj
-minimal_mistakes_skin: default
+minimal_mistakes_skin: sunrise
 
 # Build settings
 markdown: kramdown
