@@ -1,4 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/" rel="alternate" type="text/html" /><updated>2024-06-03T13:24:56+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml</id><title type="html">GSoC 2024 VisualCircuit Block Library - JdeRobot</title><author><name>Pankaj Keshav Borade</name></author><entry><title type="html">Community Bonding Week 3</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/community-bonding-week3/" rel="alternate" type="text/html" title="Community Bonding Week 3" /><published>2024-05-27T00:00:00+05:30</published><updated>2024-05-27T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/comm-w3</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/community-bonding-week3/"><![CDATA[<p>In the last week of the community bonding period, a video showcasing the Autoparking exercise of RoboticsAcademy with VisualCircuit (ROS2 Humble) was released on the JdeRobot YouTube channel [1]. This was my first time having my work released and published on JdeRobot’s social media platforms [2] [3]. I observed an issue where the value remained the same in the internal constant of identical blocks. This issue occurred when I used multiple laser blocks in the project for the Autoparking exercise. Toshan verified this issue during a meeting on his system.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/" rel="alternate" type="text/html" /><updated>2024-06-03T19:10:59+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml</id><title type="html">GSoC 2024 VisualCircuit Block Library - JdeRobot</title><author><name>Pankaj Keshav Borade</name></author><entry><title type="html">Coding Period Week 1: May 27 ~ June 03</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week1/" rel="alternate" type="text/html" title="Coding Period Week 1: May 27 ~ June 03" /><published>2024-06-03T00:00:00+05:30</published><updated>2024-06-03T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w1</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week1/"><![CDATA[<p>From here onwards Coding period begins, During the Monday meeting, mentors discussed the blocks in VisualCircuit resources and initial tests with GitHub Actions. Additionally, I had some doubts about the VC resources repository, which were clarified by the mentors.</p>
+
+<h2 id="goals">Goals</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Add basic test with Github Actions.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Modify and add the blocks in VisualCircuit resources.</li>
+</ul>
+
+<h2 id="accomplishment-and-challenges">Accomplishment and Challenges</h2>
+
+<ul>
+  <li>
+    <h4 id="first-yaml-file-for-github-actions">First yaml file for Github Actions</h4>
+    <p>First of all, it was my first time writing a YAML file for GitHub Actions. I used resources such as YouTube videos [1] and GitHub Actions documentation [2]  to help me write the initial script. From the discussions, it was clear that testing should trigger when there is a pull request to the master branch, so I started with that and followed the VisualCircuit documentation for the frontend installation.</p>
+  </li>
+</ul>
+
+<p>First failure of coding period:</p>
+
+<p><img src="../assets/images/one.png" alt="one" /></p>
+
+<ul>
+  <li>
+    <h4 id="creating-workflow-for-installation-process">Creating workflow for installation process</h4>
+    <p>The initial idea was to create a separate workflow for the installation process. This installation workflow would be reused for every test and other workflows. I worked on this and resolved the above issue by including ‘–legacy-peer-deps’ at the end of the ‘npm install’ command.</p>
+  </li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: Install and Build
+
+on:
+  pull_request:
+    branches:
+      - <span class="s1">'master'</span>
+
+<span class="nb">jobs</span>:
+  <span class="nb">install</span>:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: <span class="s1">'16'</span>
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: <span class="s1">'3.x'</span> 
+
+      - name: Install NPM dependencies
+        working-directory: frontend
+        run: npm <span class="nb">install</span> <span class="nt">--legacy-peer-deps</span>
+
+      - name: Create virtual environment
+        run: python <span class="nt">-m</span> venv .venv
+
+      - name: Activate virtual environment
+        run: <span class="nb">source</span> .venv/bin/activate
+
+      - name: Install dependencies
+        run: |
+          python <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+          pip <span class="nb">install</span> <span class="nt">-r</span> backend/requirements.txt
+      - name: Add .env file
+        run: <span class="nb">cp </span>backend/.env.template backend/.env
+
+      - name: Generate static files
+        run: python backend/manage.py collectstatic
+</code></pre></div></div>
+<ul>
+  <li>
+    <h4 id="research-and-modifying-the-workflow">Research and modifying the workflow</h4>
+    <p>I reviewed some open source projects such as RocketChat and Volto by the Plone Foundation to understand the CI pipeline workflow. I realized that creating a separate workflow for installation is uncommon and not a best practice. Instead, I created a setup job and stored the results in artifacts for use in different tests (jobs).</p>
+  </li>
+</ul>
+
+<p>Initially, I encountered a “MODULE NOT FOUND” frontend error because I stored node modules in artifacts. Storing node modules in artifacts is not ideal since artifacts are typically used for build files. Stack Overflow and GitHub Actions documentation [3] suggested using Action Cache instead. After switching to Action Cache, the issue was resolved, and I proceeded to the next step of basic frontend testing.</p>
+
+<ul>
+  <li>
+    <h4 id="ci-workflow-with-basic-frontend-test">CI Workflow with basic frontend test</h4>
+    <p>For basic frontend testing, I researched Jest and React testing frameworks commonly used for unit tests on the React side. I used prebuilt React tests and initially printed the rendered HTML in the terminal. Based on this, I identified the menubar elements and added a basic test to find and verify that the “File” text is present in the rendered App.</p>
+  </li>
+</ul>
+
+<p>CI Workflow tested in forked repo:</p>
+
+<p><img src="../assets/images/two.png" alt="two" /></p>
+
+<h2 id="prs-created">PRs created</h2>
+<ol>
+  <li><a href="https://github.com/JdeRobot/VisualCircuit/pull/306">https://github.com/JdeRobot/VisualCircuit/pull/306</a></li>
+  <li><a href="https://github.com/JdeRobot/VisualCircuit/pull/307">https://github.com/JdeRobot/VisualCircuit/pull/307</a></li>
+  <li><a href="https://github.com/JdeRobot/VisualCircuit/pull/308">https://github.com/JdeRobot/VisualCircuit/pull/308</a></li>
+  <li><a href="https://github.com/JdeRobot/VisualCircuit/pull/309">https://github.com/JdeRobot/VisualCircuit/pull/309</a></li>
+</ol>
+
+<h2 id="resources">Resources</h2>
+<ol>
+  <li><a href="https://www.youtube.com/playlist?list=PL9ok7C7Yn9A-6uidd3RXZPf5EfhxkPXa_">https://www.youtube.com/playlist?list=PL9ok7C7Yn9A-6uidd3RXZPf5EfhxkPXa_</a></li>
+  <li><a href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions">https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions</a></li>
+  <li><a href="https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows">https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows</a></li>
+</ol>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[From here onwards Coding period begins, During the Monday meeting, mentors discussed the blocks in VisualCircuit resources and initial tests with GitHub Actions. Additionally, I had some doubts about the VC resources repository, which were clarified by the mentors.]]></summary></entry><entry><title type="html">Community Bonding Week 3</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/community-bonding-week3/" rel="alternate" type="text/html" title="Community Bonding Week 3" /><published>2024-05-27T00:00:00+05:30</published><updated>2024-05-27T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/comm-w3</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/community-bonding-week3/"><![CDATA[<p>In the last week of the community bonding period, a video showcasing the Autoparking exercise of RoboticsAcademy with VisualCircuit (ROS2 Humble) was released on the JdeRobot YouTube channel [1]. This was my first time having my work released and published on JdeRobot’s social media platforms [2] [3]. I observed an issue where the value remained the same in the internal constant of identical blocks. This issue occurred when I used multiple laser blocks in the project for the Autoparking exercise. Toshan verified this issue during a meeting on his system.</p>
 
 <p>Dr. JoseMaria explained the internal workings of RADI and the Robotics Application Manager. He assigned me the task of researching and understanding RAM. Additionally, he suggested running the VisualCircuit robotics application directly from a zip file inside RADI, which will automatically unzip and run the main.py of VisualCircuit. Previously, I was copying the unzipped files to the Docker image, but with this new method, the directly built version will be used in the Docker image.</p>
 
