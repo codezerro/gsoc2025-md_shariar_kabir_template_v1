@@ -1,4 +1,97 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/" rel="alternate" type="text/html" /><updated>2024-06-03T19:10:59+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml</id><title type="html">GSoC 2024 VisualCircuit Block Library - JdeRobot</title><author><name>Pankaj Keshav Borade</name></author><entry><title type="html">Coding Period Week 1: May 27 ~ June 03</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week1/" rel="alternate" type="text/html" title="Coding Period Week 1: May 27 ~ June 03" /><published>2024-06-03T00:00:00+05:30</published><updated>2024-06-03T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w1</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week1/"><![CDATA[<p>From here onwards Coding period begins, During the Monday meeting, mentors discussed the blocks in VisualCircuit resources and initial tests with GitHub Actions. Additionally, I had some doubts about the VC resources repository, which were clarified by the mentors.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/" rel="alternate" type="text/html" /><updated>2024-06-17T21:26:03+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml</id><title type="html">GSoC 2024 VisualCircuit Block Library - JdeRobot</title><author><name>Pankaj Keshav Borade</name></author><entry><title type="html">Coding Period Week 2: June 04 ~ June 10</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week2/" rel="alternate" type="text/html" title="Coding Period Week 2: June 04 ~ June 10" /><published>2024-06-10T00:00:00+05:30</published><updated>2024-06-10T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w2</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week2/"><![CDATA[<p>Welcome to the second week of Coding Week progress. In the Monday meeting, we discussed the minimum tasks required for the midterm evaluation, reviewed the previous tasks, and assigned tasks for the next week. One of the issues in VisualCircuit is that it doesn’t generate internal scripts for nested blocks. This issue prevents the creation of complex robotics applications. To address this, I will be modifying the block composition this week. Additionally, I created a basic frontend test and installation process within GitHub Actions. This week, I will work on the first global test with GitHub Actions.</p>
+
+<h2 id="goals">Goals</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Create first global test workflow [In Progress]</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Solve the issue of nested block [In Progress]</li>
+</ul>
+
+<h2 id="accomplishment-and-challenges">Accomplishment and Challenges</h2>
+
+<ul>
+  <li>
+    <h4 id="learning-tools-for-automation---selenium">Learning tools for Automation - Selenium</h4>
+    <p>To create a global test, I needed a tool that could automatically click respective options in the VisualCircuit application. I explored several technologies such as Puppeteer, Playwright, and Selenium. I chose Selenium as it is widely used for automation. I learned how Selenium works and how to use it.</p>
+  </li>
+  <li>
+    <h4 id="integreation-of-selenium-with-github-action">Integreation of Selenium with Github Action</h4>
+    <p>From my research, I observed that there are two ways to use Selenium with GitHub Actions: one involves the standard installation of Chrome and ChromeDriver, and the other uses the selenium/standalone-chrome Docker image. I chose the second method as it includes the latest Chrome and ChromeDriver, eliminating the need for a separate ChromeDriver. Additionally, it contains all the functionalities of the Chrome browser. Initially, the browser was not displaying correctly on the Selenium Grid, only showing the logo. To view the live action of the process, I opted for noVNC.</p>
+  </li>
+  <li>
+    <h4 id="automating-clicking-file-and-open-buttons-in-the-menubar">Automating clicking File and Open buttons in the Menubar</h4>
+    <p>After successfully running selenium/standalone-chrome on my local machine, I automated the process of clicking the menubar buttons. I needed the XPATH to locate and perform the respective actions. I found the XPATH for the File and Open buttons from the Developer Console. Below is a GIF showing the automation process of opening the browser, launching VC, and clicking the respective buttons.</p>
+  </li>
+</ul>
+
+<p>Automating clicking File and Open buttons in the Menubar:</p>
+
+<p><img src="../assets/images/five.gif" alt="" /></p>
+
+<ul>
+  <li>
+    <h4 id="research-about-block-composition">Research about Block Composition</h4>
+    <p>The first step was to understand the issue created by David Tapiador. I researched the data flow of opening prebuilt VC projects, adding as a block, and the build options. When the project is built, the dependency section includes package and design key-value pairs. The dependencies were not included, which may be the reason for this nested issue.</p>
+  </li>
+  <li>
+    <h4 id="adding-interdependencies">Adding interdependencies</h4>
+    <p>For nested blocks, I modified the Dependency interface to include the interdependencies element. I also modified the package-model and converter for dependencies. Successfully, interdependencies appeared inside dependencies, but they were blank. This blank state is a great checkpoint as modifying internal structures introduced many errors. I am happy with the progress of this blank interdependencies issue.</p>
+  </li>
+</ul>
+
+<p>Integreation of interdependencies inside dependencies:</p>
+
+<p><img src="../assets/images/three.png" alt="" />
+<img src="../assets/images/four.png" alt="" /></p>
+
+<h2 id="commits">Commits</h2>
+<ol>
+  <li><a href="https://github.com/JdeRobot/VisualCircuit/commit/7ccbea013a311fe1d0af6e71408b84b3b7594f15">https://github.com/JdeRobot/VisualCircuit/commit/7ccbea013a311fe1d0af6e71408b84b3b7594f15</a></li>
+  <li><a href="https://github.com/JdeRobot/VisualCircuit/commit/8ea1c0d35e1ee11f282a7407635ff899c538f34f">https://github.com/JdeRobot/VisualCircuit/commit/8ea1c0d35e1ee11f282a7407635ff899c538f34f</a></li>
+</ol>
+
+<h2 id="previous-pr-updates">Previous PR Updates</h2>
+<ol>
+  <li>Merged - <a href="https://github.com/JdeRobot/VisualCircuit/pull/309">https://github.com/JdeRobot/VisualCircuit/pull/309</a></li>
+</ol>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[Welcome to the second week of Coding Week progress. In the Monday meeting, we discussed the minimum tasks required for the midterm evaluation, reviewed the previous tasks, and assigned tasks for the next week. One of the issues in VisualCircuit is that it doesn’t generate internal scripts for nested blocks. This issue prevents the creation of complex robotics applications. To address this, I will be modifying the block composition this week. Additionally, I created a basic frontend test and installation process within GitHub Actions. This week, I will work on the first global test with GitHub Actions.]]></summary></entry><entry><title type="html">Coding Period Week 3: June 11 ~ June 17</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week3/" rel="alternate" type="text/html" title="Coding Period Week 3: June 11 ~ June 17" /><published>2024-06-10T00:00:00+05:30</published><updated>2024-06-10T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w3</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week3/"><![CDATA[<p>On the 10th of June, during Monday’s meeting, Dr. JoseMaria explained the Global Input Output issue. Whenever the user creates a Robotics Application circuit, if it needs to generate a block, the user needs to modify the circuit, which is very time-consuming. Therefore, we need to implement the functionality for generating both the block and the circuit without modifying the circuit. This functionality will improve user performance on VC. Additionally, the tasks from the previous week were only partially completed, so they have been reassigned for this week.</p>
+<h2 id="goals">Goals</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Modification of VC block compostion for Global Input Output [In Progress]</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Create first global test workflow [In Progress]</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Solve the issue of nested block [In Progress]</li>
+</ul>
+
+<h2 id="accomplishment-and-challenges">Accomplishment and Challenges</h2>
+
+<ul>
+  <li>
+    <h4 id="understanding-the-vc-block-composition">Understanding the VC Block Composition</h4>
+    <p>I went through some frontend files such as <code class="language-plaintext highlighter-rouge">menu/index.tsx</code>, <code class="language-plaintext highlighter-rouge">project-info-dialog.tsx</code>, and <code class="language-plaintext highlighter-rouge">editor.ts</code>. These files are responsible for editing the project information on the frontend side. Initially, I thought of adding Global Input Output functionality within the existing project editing interface. However, as I began implementing it, I realized that it was more difficult than anticipated since it required changing the Project Info interface in every file. Therefore, I decided to build a new dialog box that can be opened from the “Save Block” option in the menu bar.</p>
+  </li>
+  <li>
+    <h4 id="implementation-of-global-input-output-on-frontend">Implementation of Global Input Output on frontend</h4>
+    <p>For choosing the Global Input Output, all inputs and outputs can be shown, and from there, the Global Input Output can be assigned. I created a new script for the dialog box and modified <code class="language-plaintext highlighter-rouge">editor.ts</code> and <code class="language-plaintext highlighter-rouge">menu/index.tsx</code>. Currently, all inputs and outputs are displayed. Next week, I will work on assigning the inputs and outputs as Global for the block.</p>
+  </li>
+</ul>
+
+<p>Checkbox for global input output - dialog box:</p>
+
+<p><img src="../assets/images/five.png" alt="" /></p>
+
+<ul>
+  <li>
+    <h4 id="solving-the-nested-block-with-different-approach">Solving the nested block with different approach</h4>
+    <p>In this approach, I didn’t use <code class="language-plaintext highlighter-rouge">node.dependencies</code> but instead created blocks and wires for internal dependencies. This solution was suggested by ChatGPT, so I tried it. It involved creating internal wires for dependencies and making the linkages. I spent around two days on this, but it didn’t yield the desired results. Additionally, it was suggesting editing many internal components, so I dropped this idea and returned to my nested block solution.</p>
+  </li>
+  <li>
+    <h4 id="solving-the-nested-block-with-last-week-approach">Solving the nested block with last week approach</h4>
+    <p>In the previous week, I encountered blank dependencies. I noticed that the interface dependencies contained a single dependency, so I modified it to include an array and used recursive calls to add internal dependencies. Additionally, <code class="language-plaintext highlighter-rouge">factory.tsx</code> had not been changed, so I modified that as well. However, the issue of blank dependencies still persists. I need to consult the mentors regarding this issue, as I feel it can be resolved with some more effort.</p>
+  </li>
+</ul>
+
+<h2 id="previous-pr-updates">Previous PR Updates</h2>
+<ol>
+  <li>Merged - <a href="https://github.com/JdeRobot/VisualCircuit-resources/pull/12">https://github.com/JdeRobot/VisualCircuit-resources/pull/12</a></li>
+</ol>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[On the 10th of June, during Monday’s meeting, Dr. JoseMaria explained the Global Input Output issue. Whenever the user creates a Robotics Application circuit, if it needs to generate a block, the user needs to modify the circuit, which is very time-consuming. Therefore, we need to implement the functionality for generating both the block and the circuit without modifying the circuit. This functionality will improve user performance on VC. Additionally, the tasks from the previous week were only partially completed, so they have been reassigned for this week. Goals Modification of VC block compostion for Global Input Output [In Progress] Create first global test workflow [In Progress] Solve the issue of nested block [In Progress]]]></summary></entry><entry><title type="html">Coding Period Week 1: May 27 ~ June 03</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week1/" rel="alternate" type="text/html" title="Coding Period Week 1: May 27 ~ June 03" /><published>2024-06-03T00:00:00+05:30</published><updated>2024-06-03T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w1</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week1/"><![CDATA[<p>From here onwards Coding period begins, During the Monday meeting, mentors discussed the blocks in VisualCircuit resources and initial tests with GitHub Actions. Additionally, I had some doubts about the VC resources repository, which were clarified by the mentors.</p>
 
 <h2 id="goals">Goals</h2>
 <ul class="task-list">
