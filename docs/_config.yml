@@ -90,11 +90,21 @@ footer:
       url: https://www.youtube.com/channel/UCC21Gpox7U1kT2yE6JDCW8g
 
 defaults:
-  # _pages
+  # _posts
   - scope:
       path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
       type: pages
     values:
+      layout: single
       author_profile: true
-      breadcrumbs: true
-      read_time: true

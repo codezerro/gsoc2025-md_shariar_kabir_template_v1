@@ -7,7 +7,7 @@ permalink: /
 header:
     overlay_color: "#5291C7"
 excerpt:
-    Improving the web templates using React
+    # Improving the web templates using React
 feature_row:
   - image_path: /assets/images/about_project.jpeg
     alt: "About"
