@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/" rel="alternate" type="text/html" /><updated>2024-07-22T20:12:55+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml</id><title type="html">GSoC 2024 VisualCircuit Block Library - JdeRobot</title><author><name>Pankaj Keshav Borade</name></author><entry><title type="html">Coding Period Week 2: June 04 ~ June 10</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week2/" rel="alternate" type="text/html" title="Coding Period Week 2: June 04 ~ June 10" /><published>2024-06-10T00:00:00+05:30</published><updated>2024-06-10T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w2</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week2/"><![CDATA[<p>Welcome to the second week of Coding Week progress. In the Monday meeting, we discussed the minimum tasks required for the midterm evaluation, reviewed the previous tasks, and assigned tasks for the next week. One of the issues in VisualCircuit is that it doesn’t generate internal scripts for nested blocks. This issue prevents the creation of complex robotics applications. To address this, I will be modifying the block composition this week. Additionally, I created a basic frontend test and installation process within GitHub Actions. This week, I will work on the first global test with GitHub Actions.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/" rel="alternate" type="text/html" /><updated>2024-07-29T17:52:55+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml</id><title type="html">GSoC 2024 VisualCircuit Block Library - JdeRobot</title><author><name>Pankaj Keshav Borade</name></author><entry><title type="html">Coding Period Week 2: June 04 ~ June 10</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week2/" rel="alternate" type="text/html" title="Coding Period Week 2: June 04 ~ June 10" /><published>2024-06-10T00:00:00+05:30</published><updated>2024-06-10T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w2</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week2/"><![CDATA[<p>Welcome to the second week of Coding Week progress. In the Monday meeting, we discussed the minimum tasks required for the midterm evaluation, reviewed the previous tasks, and assigned tasks for the next week. One of the issues in VisualCircuit is that it doesn’t generate internal scripts for nested blocks. This issue prevents the creation of complex robotics applications. To address this, I will be modifying the block composition this week. Additionally, I created a basic frontend test and installation process within GitHub Actions. This week, I will work on the first global test with GitHub Actions.</p>
 
 <h2 id="goals">Goals</h2>
 <ul class="task-list">
@@ -211,46 +211,128 @@ Selenium based first automated global test:</p>
 </ul>
 
 <p>Blank script and no internal script in the modules directory issue image:
-<img src="../assets/images/thirteen.png" alt="" /></p>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[All the issues and possible cases of composed blocks were resolved last week. In the Monday meeting on July 1st, I showed a dummy example of an adder using composed blocks, and the mentors discussed the robotics application that needs to be developed using the composed block feature. In the 6th week, I was busy with personal work and unable to complete my tasks on time, so I requested an extension for the 6th week’s work to be done in the 7th week. During the 6th week, I searched for Gazebo worlds and downloaded several open-source ones. My initial plan was to develop the drone gymkhana of RoboticsAcademy using composed blocks. However, it was not available in the newer version of RADI, so I could not obtain the world and models from RoboticsInfrastructure. I decided to go with the Follow Road exercise from RA, as it was already developed but with an earlier version of VC. I also encountered a major issue in composed block that I need to discuss with the mentors. Goals Develop the Robotics Application with composed block (Major issue found)]]></summary></entry><entry><title type="html">Coding Period Week 8: July 16 ~ July 22</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week8/" rel="alternate" type="text/html" title="Coding Period Week 8: July 16 ~ July 22" /><published>2024-06-10T00:00:00+05:30</published><updated>2024-06-10T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w8</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week8/"><![CDATA[<p>In the eighth week’s Monday meeting, we discussed regarding issues I have faced in last week and major issues coming in between the demo application with composed block feature. Mentors explained the concept and showed the work path for problem with encoder and decoder example. The major issue was nested issue, went through what hurdles came in week 3 progress of nested block. So In this week I have completely worked on the nested issue. Also achieved significant work compared to week 3 issue.</p>
+<img src="../assets/images/thirteen.png" alt="" /></p>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[All the issues and possible cases of composed blocks were resolved last week. In the Monday meeting on July 1st, I showed a dummy example of an adder using composed blocks, and the mentors discussed the robotics application that needs to be developed using the composed block feature. In the 6th week, I was busy with personal work and unable to complete my tasks on time, so I requested an extension for the 6th week’s work to be done in the 7th week. During the 6th week, I searched for Gazebo worlds and downloaded several open-source ones. My initial plan was to develop the drone gymkhana of RoboticsAcademy using composed blocks. However, it was not available in the newer version of RADI, so I could not obtain the world and models from RoboticsInfrastructure. I decided to go with the Follow Road exercise from RA, as it was already developed but with an earlier version of VC. I also encountered a major issue in composed block that I need to discuss with the mentors. Goals Develop the Robotics Application with composed block (Major issue found)]]></summary></entry><entry><title type="html">Coding Period Week 8: July 16 ~ July 22</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week8/" rel="alternate" type="text/html" title="Coding Period Week 8: July 16 ~ July 22" /><published>2024-06-10T00:00:00+05:30</published><updated>2024-06-10T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w8</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week8/"><![CDATA[<p>In the eighth week’s Monday meeting, we discussed the issues I faced last week and the major issues encountered with the demo application, specifically with the composed block feature. Mentors explained the concept and showed the workflow to address the problem using an encoder and decoder example. The major issue was a nested issue, similar to the hurdles experienced in week 3 regarding nested blocks. This week, I completely focused on the nested issue and achieved significant progress compared to week 3.</p>
 <h2 id="goals">Goals</h2>
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Solve the blank dependicies issue - nested issue</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Nested python files not coming in Modules directories issue - nested issue</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Solve the blank dependencies issue - nested issue</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Resolve the issue of nested Python files not appearing in the Modules directories - nested issue</li>
 </ul>
+
+<h2 id="images">Images</h2>
+<p>Nested dependencies in .vc3/ .json file Level 2:
+<img src="../assets/images/fourteen.png" alt="" /></p>
+
+<p>Nested dependencies in .vc3/ .json file Level 3:
+<img src="../assets/images/fifteen.png" alt="" /></p>
+
+<p>Modules directory with all nested python files:
+<img src="../assets/images/sixteen.png" alt="" /></p>
 
 <h2 id="accomplishment-and-challenges">Accomplishment and Challenges</h2>
 
 <ul>
   <li>
-    <h4 id="analyzing-the-3rd-week-code-of-nested-issue">Analyzing the 3rd week code of nested issue</h4>
-    <p>As Dr.JoseMaria added in meeting go to the basics and see solution at internal architecture. So I again recreated issue in 3rd week solution I wrote two code one having the script such as new node is created according to dependicies and then new wiring were made but that was no sustainable as there can many dependicies with many internal dependicies so that will create more complex links so after analyzing I dropped that idea. Now second was recurssion based getting all dependicies in this there was blank dependicies came. So I tried analyzing this solution but didn’t got any improvement but I changed this recurssion solution from package level.</p>
+    <h4 id="analyzing-the-week-3-code-for-the-nested-issue">Analyzing the Week 3 Code for the Nested Issue</h4>
+    <p>Dr. Jose Maria suggested in the meeting to revisit the basics and look for solutions in the internal architecture. Therefore, I recreated the issue from week 3. I wrote two codes: one where a new node is created according to dependencies and new wiring was made. However, this approach was not sustainable due to the potential complexity from multiple dependencies. I dropped that idea. The second approach was recursion-based on frontend side, aimed at getting all dependencies, but it resulted in blank dependencies. After analyzing this solution, I changed the recursion solution from the package level.</p>
   </li>
   <li>
     <h4 id="blank-dependicies-issue">Blank dependicies issue</h4>
-    <p>As I went deeper inside PackageBlockModel and factory.tsx. I observed I created nested dependicies but that was not present at inteface of PackageBlockModel. So I changed the array of dependency from every script and added internal dependicies respective interface and methods. The solution was very close but I took other way in 3rd week time.</p>
+    <p>Upon deeper analyzing into PackageBlockModel and factory.tsx, I observed that I had created nested dependencies that were not present in the interface of PackageBlockModel. I modified the dependency array for every script and added internal dependencies to the respective interface and methods. The solution was close to being resolve, but I took a different approach in week 3.</p>
   </li>
   <li>
     <h4 id="python-script-in-modules-directory-issue">Python script in modules directory issue</h4>
-    <p>First of all the circuit was not building but Save as working. As there was nested dependeicies synthesis file not able to processed. So I added recurssive solution for getting the nested dependices from frontend and it was very challenging as the files were creating but not all levels so I also after debugging I found that issue was missing of each level internal dependicies also key was not properly assigned. Above are the images attached of progress this week.</p>
+    <p>Initially, the circuit was not building, but the Save as function was working. Due to nested dependencies, the synthesis file could not be processed. I added a recursive solution to get the nested dependencies from the frontend, which was very challenging. The files were being created but not at all levels. After debugging, I found that the issue was the missing internal dependencies at each level and the improper assignment of keys. The above images attached show the progress made this week.</p>
   </li>
 </ul>
-
-<p>Normal circuit to be converted for block:
-<img src="../assets/images/eight.png" alt="" /></p>
-
-<p>Global input ouput port selection :
-<img src="../assets/images/nine.png" alt="" /></p>
-
-<p>Generated block:
-<img src="../assets/images/seven.png" alt="" /></p>
-
-<p>Internal block structure:
-<img src="../assets/images/ten.png" alt="" /></p>
 
 <h2 id="pr-created">PR Created</h2>
 <ol>
   <li><a href="https://github.com/JdeRobot/VisualCircuit/pull/322">https://github.com/JdeRobot/VisualCircuit/pull/322</a></li>
-</ol>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[In the eighth week’s Monday meeting, we discussed regarding issues I have faced in last week and major issues coming in between the demo application with composed block feature. Mentors explained the concept and showed the work path for problem with encoder and decoder example. The major issue was nested issue, went through what hurdles came in week 3 progress of nested block. So In this week I have completely worked on the nested issue. Also achieved significant work compared to week 3 issue. Goals Solve the blank dependicies issue - nested issue Nested python files not coming in Modules directories issue - nested issue]]></summary></entry><entry><title type="html">Coding Period Week 1: May 27 ~ June 03</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week1/" rel="alternate" type="text/html" title="Coding Period Week 1: May 27 ~ June 03" /><published>2024-06-03T00:00:00+05:30</published><updated>2024-06-03T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w1</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week1/"><![CDATA[<p>From here onwards Coding period begins, During the Monday meeting, mentors discussed the blocks in VisualCircuit resources and initial tests with GitHub Actions. Additionally, I had some doubts about the VC resources repository, which were clarified by the mentors.</p>
+</ol>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[In the eighth week’s Monday meeting, we discussed the issues I faced last week and the major issues encountered with the demo application, specifically with the composed block feature. Mentors explained the concept and showed the workflow to address the problem using an encoder and decoder example. The major issue was a nested issue, similar to the hurdles experienced in week 3 regarding nested blocks. This week, I completely focused on the nested issue and achieved significant progress compared to week 3. Goals Solve the blank dependencies issue - nested issue Resolve the issue of nested Python files not appearing in the Modules directories - nested issue]]></summary></entry><entry><title type="html">Coding Period Week 9: July 23 ~ July 29</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week9/" rel="alternate" type="text/html" title="Coding Period Week 9: July 23 ~ July 29" /><published>2024-06-10T00:00:00+05:30</published><updated>2024-06-10T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w9</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week9/"><![CDATA[<p>During our Monday meeting, we discussed the progress I made on the nested and composed block issue and outlined what needs to be achieved in the upcoming weeks. Essentially, there were two main goals for this week, but the nested issue had many internal problems. In the current version, dependencies could only have a single code block, and wires and blocks were created for whole dependencies. If there were multiple codes, it would only take one code block and generate the data.json. Therefore, I also needed to fix this and make all links and blocks from multiple levels into a single layer in the backend processing. This is why resolving the nested issue took more time. Additionally, there were many errors that came up during the process, which further delayed progress. However, by the end of the week, the entire nested issue was resolved.</p>
+
+<h2 id="goals">Goals</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Solve the nested issue completely</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Integrate nested code into last week composed block code.</li>
+</ul>
+
+<h2 id="sub-goals">Sub-Goals</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Understanding backend processing for single-level dependencies.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Creating sample tests to determine necessary wires and blocks for the built zip file.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Fixing the issue of missing nested wires in data.json after backend processing.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Addressing the problem of missing nested internal blocks in data.json.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Modifying the current version’s single code block dependency code to support multi-level dependencies with multiple code blocks.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Writing code for processing wires, including filtering and mapping to required blocks.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Removing unwanted links between global inputs outputs and testing the nested issue code with different examples.</li>
+</ul>
+
+<h2 id="images">Images</h2>
+<p>Level1 Sample Circuit:
+<img src="../assets/images/seventeen.png" alt="" /></p>
+
+<p>Level2 Inside test_second_block Block (nested level 1):
+<img src="../assets/images/eighteen.png" alt="" /></p>
+
+<p>Level3 Inside test_first_block Block (nested level 2):
+<img src="../assets/images/nineteen.png" alt="" /></p>
+
+<p>Before modification of nested issue - data.json:
+<img src="../assets/images/twentyone.png" alt="" /></p>
+
+<p>After modification of nested issue - data.json:
+<img src="../assets/images/twentytwo.png" alt="" /></p>
+
+<p>Python Modules Scripts after processing:
+<img src="../assets/images/twenty.png" alt="" /></p>
+
+<p>Output including printing at every level and code block:
+<img src="../assets/images/twentythree.png" alt="" /></p>
+
+<h2 id="accomplishment-and-challenges">Accomplishment and Challenges</h2>
+
+<ul>
+  <li>
+    <h4 id="modifying-the-current-version-to-support-multi-code-block-dependency">Modifying the Current Version to Support Multi Code Block Dependency</h4>
+  </li>
+</ul>
+
+<p>When I completed writing the entire logic, I found that multiple codes were not supported, and extra wires were created that couldn’t connect. Additionally, other code blocks of inter-dependency were not included in data.json, leading to improper linkage. I modified synthesize_modules and changed the logic for adding internal blocks, so they were not treated as whole dependencies. This way, the blocks were added at one level.</p>
+
+<ul>
+  <li>
+    <h4 id="understanding-backend-processing-by-creating-sample-tests">Understanding Backend Processing by Creating Sample Tests</h4>
+    <p>To understand the process, I created a sample test and added blocks and wires in data.json. This helped me see how the internal file structure of the zip file works after building. I drew the whole connection and tried to replicate it by modifying synthesis.py using recursive and iterative techniques until level 1 was achieved.</p>
+  </li>
+  <li>
+    <h4 id="fixing-the-issue-of-missing-nested-blocks-after-backend-processing">Fixing the Issue of Missing Nested Blocks After Backend Processing</h4>
+    <p>I created the process_dependency function, which is called inside synthesize_modules. This function iterates over all blocks of a dependency and creates module Python scripts depending on the block type. Only code block type modules and block values are included in data.json. If there is a dependency inside a dependency, process_dependency is called recursively until no nested dependencies are left. This method ensures that only code blocks are included in the modules directory, while other blocks such as global input/output, dependencies, and constants are filtered out.</p>
+  </li>
+  <li>
+    <h4 id="writing-code-for-filtering-and-mapping-the-wires-in-backend">Writing code for filtering and mapping the wires in backend</h4>
+    <p>After obtaining the proper blocks in data.json, I focused on the wires. In the current version, level 1 blocks were being added to data.json, so I modified process_dependency to include every wire. There were wires for packages and global input/output, which required proper filtering and the creation of new links between the required blocks. I iterated over all wires selected from process_dependency and segregated them based on the wire’s source and target block ID. After that, in another iteration, I checked each wire with the filtered blocks in data.json to determine if the block was present, adding the key pair of ob:absent. Then, I created process_wire, where all wire mappings were handled. This function contains nested iterations:</p>
+  </li>
+</ul>
+
+<ol>
+  <li>The first internal iteration iterates over all valid wires, checks for global input and output, and either saves the wire in a dictionary or removes the entire source-target link based on the presence of the absent value.</li>
+  <li>The second internal iteration checks the wire’s port, replacing package-type wire with the corresponding source-target dictionary generated in the last iteration.</li>
+</ol>
+
+<p>This way, new links are created, and the absent value helps the code decide whether to loop again or exit process_wire.</p>
+
+<h2 id="prs-created">PRs Created</h2>
+<ol>
+  <li>Closed and Merged - <a href="https://github.com/JdeRobot/VisualCircuit/pull/322">https://github.com/JdeRobot/VisualCircuit/pull/322</a></li>
+  <li>Closed and Merged - <a href="https://github.com/JdeRobot/VisualCircuit/pull/323">https://github.com/JdeRobot/VisualCircuit/pull/323</a></li>
+</ol>
+
+<h2 id="commits">Commits</h2>
+<ol>
+  <li><a href="https://github.com/JdeRobot/VisualCircuit/commit/a367ffb4f22dd3b2396633ef6e909108777e0376">https://github.com/JdeRobot/VisualCircuit/commit/a367ffb4f22dd3b2396633ef6e909108777e0376</a></li>
+  <li><a href="https://github.com/JdeRobot/VisualCircuit/commit/3afffd77ab40766c36ebbbcb1bb603feb38b70eb">https://github.com/JdeRobot/VisualCircuit/commit/3afffd77ab40766c36ebbbcb1bb603feb38b70eb</a></li>
+  <li><a href="https://github.com/JdeRobot/VisualCircuit/commit/91ae5f1a8b4abe80ce3c2edf128467f6376f4644">https://github.com/JdeRobot/VisualCircuit/commit/91ae5f1a8b4abe80ce3c2edf128467f6376f4644</a></li>
+</ol>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[During our Monday meeting, we discussed the progress I made on the nested and composed block issue and outlined what needs to be achieved in the upcoming weeks. Essentially, there were two main goals for this week, but the nested issue had many internal problems. In the current version, dependencies could only have a single code block, and wires and blocks were created for whole dependencies. If there were multiple codes, it would only take one code block and generate the data.json. Therefore, I also needed to fix this and make all links and blocks from multiple levels into a single layer in the backend processing. This is why resolving the nested issue took more time. Additionally, there were many errors that came up during the process, which further delayed progress. However, by the end of the week, the entire nested issue was resolved.]]></summary></entry><entry><title type="html">Coding Period Week 1: May 27 ~ June 03</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week1/" rel="alternate" type="text/html" title="Coding Period Week 1: May 27 ~ June 03" /><published>2024-06-03T00:00:00+05:30</published><updated>2024-06-03T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w1</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week1/"><![CDATA[<p>From here onwards Coding period begins, During the Monday meeting, mentors discussed the blocks in VisualCircuit resources and initial tests with GitHub Actions. Additionally, I had some doubts about the VC resources repository, which were clarified by the mentors.</p>
 
 <h2 id="goals">Goals</h2>
 <ul class="task-list">
@@ -392,24 +474,4 @@ on:
 <p>First meeting with JdeRobot community screenshot:</p>
 
 <!-- <img src="../assets/images/meettwo.jpg" width=50% height=50%> -->
-<p><img src="../assets/images/meettwo.jpg" alt="Firstmeet" /></p>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[In the second week of the community bonding period, there was an introductory meeting with the entire JdeRobot community. In the meeting, Pedro and Dr. JoseMaria introduced the workflow and team, and every GSoC 2024 student introduced themselves. Apart from this meeting, there was a meeting scheduled for May 13th, but due to rainy weather in the western part of India, there was no proper connectivity, so that meeting concluded through text on Slack. After two days, Toshan rescheduled the meeting, and the following tasks were assigned and completed.]]></summary></entry><entry><title type="html">Community Bonding Week 1</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/s/" rel="alternate" type="text/html" title="Community Bonding Week 1" /><published>2024-05-11T00:00:00+05:30</published><updated>2024-05-11T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/comm-w1_2</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/s/"><![CDATA[<p>Hello everyone,</p>
-
-<p>As you landed on my first week of community bonding period progress so you will have some idea about myself. If not then My name is Pankaj Borade, and I am a final-year student at Sardar Vallabhbhai National Institute of Technology (SVNIT Surat), pursuing Electronics and Communication Engineering.</p>
-
-<p>First of all, it was my dream from my first year to work in GSoC with a mixed robotics and software tech stack, and that dream came true on 1st May 2024. I would like to extend my sincere thanks to the entire JdeRobot community, especially Dr. JoseMaria and Toshan, and the other incredible open-source developers, for providing me with this opportunity.</p>
-
-<p>Now let’s together start the GSoC 2024 blog. I will be working on VisualCircuit Block library project. Basically it includes automated testing with GitHub Actions, refining block composition, and much more in VisualCircuit.Additionally, there was the first GSoC meeting with mentors Dr. JoseMaria and Toshan on May 6th. I also joined the community group on Slack.</p>
-
-<h2 id="work-done">Work Done</h2>
-<ol>
-  <li>Completed setup of RoboticsAcademy for ROS2 Humble</li>
-  <li>Created Blog website</li>
-  <li>Created video and completed Autoparking of RA through VisualCircuit using ROS2 blocks.</li>
-</ol>
-
-<h2 id="media">Media</h2>
-
-<p>First meeting with mentors screenshot:</p>
-
-<!-- <img src="../assets/images/meetone.jpg" width=50% height=50%> -->
-<p><img src="../assets/images/meetone.jpg" alt="Firstmeet" /></p>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[Hello everyone,]]></summary></entry></feed>
+<p><img src="../assets/images/meettwo.jpg" alt="Firstmeet" /></p>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[In the second week of the community bonding period, there was an introductory meeting with the entire JdeRobot community. In the meeting, Pedro and Dr. JoseMaria introduced the workflow and team, and every GSoC 2024 student introduced themselves. Apart from this meeting, there was a meeting scheduled for May 13th, but due to rainy weather in the western part of India, there was no proper connectivity, so that meeting concluded through text on Slack. After two days, Toshan rescheduled the meeting, and the following tasks were assigned and completed.]]></summary></entry></feed>
