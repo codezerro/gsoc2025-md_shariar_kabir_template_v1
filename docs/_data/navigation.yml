@@ -3,10 +3,10 @@ main:
     url: /
   - title: "Blogs"
     url: /blogs/
-  - title: "About me"
-    url: /about/
+  - title: "About"
+    url: /About/
   - title: "Github"
-    url: /tags/
+    url: https://github.com/TheRoboticsClub/gsoc2024-Pankaj_Borade
 
 # left side bar
 docs:
@@ -14,56 +14,25 @@ docs:
     url: /blogs/
     children:
     - title: "Community Bonding - Week 1"
-      url: /community-bonding-week1
+      url: /community-bonding-week1/
     - title: "Community Bonding - Week 2"
-      url: /CBW2
+      url: /community-bonding-week2/
     - title: "Community Bonding - Week 3"
-      url: /CBW3
+      url: /community-bonding-week3/
     - title: "Coding Period - Week 1"
-      url: /CPW1
+      url: /coding-week1/
     - title: "Coding Period - Week 2"
-      url: /CPW2
+      url: /coding-week2/
     - title: "Coding Period - Week 3"
-      url: /CPW3
+      url: /coding-week3/
     - title: "Coding Period - Week 4"
-      url: /CPW4
+      url: /coding-week4/
     - title: "Coding Period - Week 5"
-      url: /CPW5
-    - title: "Coding Period - Week 6"
-      url: /CPW6
-    - title: "Coding Period - Week 7"
-      url: /CPW7
+      url: /coding-week5/
+    - title: "Coding Period - Week 6,7"
+      url: /coding-week6-7/
     - title: "Coding Period - Week 8"
-      url: /CPW8
+      url: /coding-week8/
     - title: "Coding Period - Week 9"
-      url: /CPW9
-    - title: "Coding Period - Week 10"
-      url: /CPW10
-    - title: "Coding Period - Week 11"
-      url: /CPW11
-    - title: "Coding Period - Week 12"
-      url: /CPW12                  
-    - title: "Mid term Evaluation"
-      url: /midEval
-    - title: "Final term Evaluation"
-      url: /fte  
-
-  - title: About
-    children:
-    - title: About the project
-      url: /about/
-    - title: About Me
-      url: /aboutMe/
-    - title: Summary
-      url: /summary/    
-
-  - title: Video Logs
-    children:
-    - title: Youtube
-      url: /vlogs/
-  - title: Issues & PR
-    children:
-    - title: Issues
-      url: /issue/
-    - title: Pull Request
-      url: /pr 
+      url: /coding-week9/
+    
