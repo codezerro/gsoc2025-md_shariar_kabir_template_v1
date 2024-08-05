@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/" rel="alternate" type="text/html" /><updated>2024-07-31T12:18:54+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml</id><title type="html">GSoC 2024 VisualCircuit Block Library - JdeRobot</title><author><name>Pankaj Keshav Borade</name></author><entry><title type="html">Coding Period Week 2: June 04 ~ June 10</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week2/" rel="alternate" type="text/html" title="Coding Period Week 2: June 04 ~ June 10" /><published>2024-06-10T00:00:00+05:30</published><updated>2024-06-10T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w2</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week2/"><![CDATA[<p>Welcome to the second week of Coding Week progress. In the Monday meeting, we discussed the minimum tasks required for the midterm evaluation, reviewed the previous tasks, and assigned tasks for the next week. One of the issues in VisualCircuit is that it doesn’t generate internal scripts for nested blocks. This issue prevents the creation of complex robotics applications. To address this, I will be modifying the block composition this week. Additionally, I created a basic frontend test and installation process within GitHub Actions. This week, I will work on the first global test with GitHub Actions.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/" rel="alternate" type="text/html" /><updated>2024-08-05T21:09:05+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml</id><title type="html">GSoC 2024 VisualCircuit Block Library - JdeRobot</title><author><name>Pankaj Keshav Borade</name></author><entry><title type="html">Coding Period Week 10: July 30 ~ Aug 05</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week10/" rel="alternate" type="text/html" title="Coding Period Week 10: July 30 ~ Aug 05" /><published>2024-07-05T00:00:00+05:30</published><updated>2024-07-05T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w10</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week10/"><![CDATA[<p>In the tenth week’s Monday meeting, we discussed progress until the ninth week and outlined the tasks for the upcoming week. The main goal is to perform a robotics application with new nested code. I chose David’s FSM issue for the robotics application. Mentor Dr. José María sent the GitHub link to David’s repository. Several issues arose, and one is still ongoing, which I will discuss in the Challenges section. Through this robotics application, several loose ends were identified, and I resolved them this week. However, one issue remains that I need to address.</p>
+
+<h2 id="goals">Goals</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Solve the Robotics Application with nested and composed version (Found Issues)</li>
+</ul>
+
+<h2 id="sub-goals">Sub-Goals</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Understand David’s FSM circuit and issue</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Replicate David’s VC Circuit with a newer version</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Run the FSM on a single level</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />New issue: Nested parameters not appearing in the build file</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Resolve the parameters issue by modifying earlier version code</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />New issue: Analyze the issue of nested FSM; unable to run single port with multiple IN and OUT.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Update the blog page with about, home, sidebar.</li>
+</ul>
+
+<h2 id="images">Images</h2>
+<p>Older version FSM single level circuit:
+<img src="../assets/images/twentyfour.png" alt="" /></p>
+
+<p>Recreated working FSM circuit with nested code:
+<img src="../assets/images/twentyfive.png" alt="" />
+<img src="../assets/images/twentysix.png" alt="" /></p>
+
+<p>Output of single level:
+<img src="../assets/images/twentyseven.png" alt="" />
+<img src="../assets/images/twentyeight.png" alt="" /></p>
+
+<p>Parameter issue:
+<img src="../assets/images/twentynine.png" alt="" /></p>
+
+<p>Single port - Multiple IN and Multiple OUT issue:
+<img src="../assets/images/thirty.png" alt="" /></p>
+
+<h2 id="accomplishment-and-challenges">Accomplishment and Challenges</h2>
+
+<ul>
+  <li>
+    <h4 id="replicating-davids-fsm-circuit">Replicating David’s FSM Circuit</h4>
+    <p>The nested issue was opened by David around a year ago when he faced this problem while creating the FSM circuit with VC. My first goal was to recreate the nested FSM circuit. You may wonder why recreate it? The circuit was made with an earlier version, and the internal blocks will not have interdependency if I build with the older .vc3. So, I had to recreate every block and circuit. There was an issue when I ran the parameters; they were missing, so I checked with data.json and found missing parameters.</p>
+  </li>
+  <li>
+    <h4 id="parameter-issue-in-nested-code">Parameter Issue in Nested Code</h4>
+    <p>The earlier code was developed for one code block dependency, similar to nested blocks. The parameter IDs depended on the “type ID” of the dependency, but if multiple blocks are inside the dependency, this method will have the same type ID, and the parameters cannot map to the correct block. This type_ID needed to be changed in nested code. All blocks in data.json are at a single level, so the types are basic blocks. Initially, I thought to create a random alphanumeric string of 30 characters as the parameter ID. After implementing it, many issues were found, such as if parameters are used in input and output, leading to more confusion in wire mapping. Then, I implemented a new ID not dependent on type_ID, and particular wires will map with blocks, so the issue of mapping extra wires also won’t occur.</p>
+  </li>
+  <li>
+    <h4 id="single-level-fsm-circuit">Single level FSM Circuit</h4>
+    <p>After solving the parameters issue, I proceeded with the single-level FSM circuit. The blocks such as laser_ROS2, motor_ROS2, and screen used by David were not from the block library. Initially, it didn’t work, and finding the issue took more time. After analyzing the internal code of the above blocks, they were customized. After modifying and recreating, the whole logic ran without any issue. I ran turtlebot3 in an empty world inside my local machine and ran the FSM logic with VC.</p>
+  </li>
+  <li>
+    <h4 id="issue-in-multi-level-fsm-circuit-major-issue">Issue in multi level FSM Circuit (Major issue)</h4>
+    <p>After running the single level, I was confident it would run with nested, but as the saying goes, things don’t always go as planned. David used single port multiple OUT to different blocks and took input outside of the composed block from multiple blocks. However, I wrote for single IN - OUT, so it could not map the multiple blocks; it was taking one block and connecting to another block. This is a big issue as it requires looking again at the mapping of wires and adding conditions for such situations.</p>
+  </li>
+</ul>
+
+<h2 id="prs-created">PRs Created</h2>
+<ol>
+  <li>Open - <a href="https://github.com/JdeRobot/VisualCircuit/pull/325">https://github.com/JdeRobot/VisualCircuit/pull/325</a></li>
+</ol>
+
+<h2 id="issues">Issues</h2>
+<ol>
+  <li>Open - <a href="https://github.com/JdeRobot/VisualCircuit/issues/324">https://github.com/JdeRobot/VisualCircuit/issues/324</a></li>
+</ol>
+
+<h2 id="links">Links</h2>
+<ol>
+  <li>Midterm update linkedin post - <a href="https://www.linkedin.com/feed/update/urn:li:activity:7226124206420180992/">https://www.linkedin.com/feed/update/urn:li:activity:7226124206420180992/</a></li>
+</ol>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[In the tenth week’s Monday meeting, we discussed progress until the ninth week and outlined the tasks for the upcoming week. The main goal is to perform a robotics application with new nested code. I chose David’s FSM issue for the robotics application. Mentor Dr. José María sent the GitHub link to David’s repository. Several issues arose, and one is still ongoing, which I will discuss in the Challenges section. Through this robotics application, several loose ends were identified, and I resolved them this week. However, one issue remains that I need to address.]]></summary></entry><entry><title type="html">Coding Period Week 2: June 04 ~ June 10</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week2/" rel="alternate" type="text/html" title="Coding Period Week 2: June 04 ~ June 10" /><published>2024-06-10T00:00:00+05:30</published><updated>2024-06-10T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w2</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week2/"><![CDATA[<p>Welcome to the second week of Coding Week progress. In the Monday meeting, we discussed the minimum tasks required for the midterm evaluation, reviewed the previous tasks, and assigned tasks for the next week. One of the issues in VisualCircuit is that it doesn’t generate internal scripts for nested blocks. This issue prevents the creation of complex robotics applications. To address this, I will be modifying the block composition this week. Additionally, I created a basic frontend test and installation process within GitHub Actions. This week, I will work on the first global test with GitHub Actions.</p>
 
 <h2 id="goals">Goals</h2>
 <ul class="task-list">
@@ -457,21 +527,4 @@ on:
   <li><a href="https://youtu.be/SRSmFSIsZWQ?si=qu_DoqOhfxu3OkGi">https://youtu.be/SRSmFSIsZWQ?si=qu_DoqOhfxu3OkGi</a></li>
   <li><a href="https://twitter.com/JdeRobot/status/1793202648411230247">https://twitter.com/JdeRobot/status/1793202648411230247</a></li>
   <li><a href="https://www.linkedin.com/posts/jderobot_roboticsacademy-ros2-visualcircuit-activity-7198419498582859777-qLtj/">https://www.linkedin.com/posts/jderobot_roboticsacademy-ros2-visualcircuit-activity-7198419498582859777-qLtj/</a></li>
-</ol>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[In the last week of the community bonding period, a video showcasing the Autoparking exercise of RoboticsAcademy with VisualCircuit (ROS2 Humble) was released on the JdeRobot YouTube channel [1]. This was my first time having my work released and published on JdeRobot’s social media platforms [2] [3]. I observed an issue where the value remained the same in the internal constant of identical blocks. This issue occurred when I used multiple laser blocks in the project for the Autoparking exercise. Toshan verified this issue during a meeting on his system.]]></summary></entry><entry><title type="html">Community Bonding Week 2</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/community-bonding-week2/" rel="alternate" type="text/html" title="Community Bonding Week 2" /><published>2024-05-20T00:00:00+05:30</published><updated>2024-05-20T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/comm-w2</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/community-bonding-week2/"><![CDATA[<p>In the second week of the community bonding period, there was an introductory meeting with the entire JdeRobot community. In the meeting, Pedro and Dr. JoseMaria introduced the workflow and team, and every GSoC 2024 student introduced themselves. Apart from this meeting, there was a meeting scheduled for May 13th, but due to rainy weather in the western part of India, there was no proper connectivity, so that meeting concluded through text on Slack. After two days, Toshan rescheduled the meeting, and the following tasks were assigned and completed.</p>
-
-<h2 id="work-done">Work Done</h2>
-<ol>
-  <li>Made changes to the video, including adding subtitles and adjusting the speed of clips, as per the mentors’ suggestions.</li>
-  <li>Learned about Releases in GitHub.</li>
-  <li>Generated the JSON file for the Laser ROS1 Noetic block and created a PR accordingly.</li>
-</ol>
-
-<h2 id="prs-created">PRs Created</h2>
-<p><a href="https://github.com/JdeRobot/VisualCircuit/pull/304">https://github.com/JdeRobot/VisualCircuit/pull/304</a></p>
-
-<h2 id="media">Media</h2>
-
-<p>First meeting with JdeRobot community screenshot:</p>
-
-<!-- <img src="../assets/images/meettwo.jpg" width=50% height=50%> -->
-<p><img src="../assets/images/meettwo.jpg" alt="Firstmeet" /></p>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[In the second week of the community bonding period, there was an introductory meeting with the entire JdeRobot community. In the meeting, Pedro and Dr. JoseMaria introduced the workflow and team, and every GSoC 2024 student introduced themselves. Apart from this meeting, there was a meeting scheduled for May 13th, but due to rainy weather in the western part of India, there was no proper connectivity, so that meeting concluded through text on Slack. After two days, Toshan rescheduled the meeting, and the following tasks were assigned and completed.]]></summary></entry></feed>
+</ol>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[In the last week of the community bonding period, a video showcasing the Autoparking exercise of RoboticsAcademy with VisualCircuit (ROS2 Humble) was released on the JdeRobot YouTube channel [1]. This was my first time having my work released and published on JdeRobot’s social media platforms [2] [3]. I observed an issue where the value remained the same in the internal constant of identical blocks. This issue occurred when I used multiple laser blocks in the project for the Autoparking exercise. Toshan verified this issue during a meeting on his system.]]></summary></entry></feed>
