@@ -1,3 +1,21 @@
-# gsoc2024-Pankaj_Borade
 
-Link for Blog Post : [https://theroboticsclub.github.io/gsoc2024-Pankaj_Borade/posts/](https://theroboticsclub.github.io/gsoc2024-Pankaj_Borade/posts/)
+## Pankaj Borade | JdeRobot x GSoC 2024
+<div style="display: flex; justify-content: space-between;">
+    <img src="/docs/assets/images/logo.png" alt="Image 1" style="width: 100px; height: auto; max-height: 130px;">
+    <img src="/docs/assets/images/GSoC-Horizontal.png" alt="Image 2" style="margin-top:20px; width: 270px; height: auto; max-height: 50px;">
+</div>
+
+Namaste Amazing people,
+
+
+My name is Pankaj Borade, and I am a final-year student at Sardar Vallabhbhai National Institute of Technology (SV-NIT Surat), pursuing Electronics and Communication Engineering. I’m incredibly thrilled to be a part of this GSoC 2024 program, where I’ll be making meaningful contributions to VisualCircuit by JdeRobot, an open-source platform that allows users to program robotic intelligence using a visual language consisting of blocks and wires.
+
+This GSoC Project focuses on adding a global block composition feature, resolving nested issues, modifying the current version single dependency codebase to multi-level dependency, implementing two or more demo robotics applications, expanding the block library, automating the testing of Visual Circuit and its documentation using GitHub Actions, and releasing the new version with all issue fixes. The journey from Day 0 to the current progress is illustrated in the [progress blog](https://theroboticsclub.github.io/gsoc2024-Pankaj_Borade/posts/).
+
+Mentors:
+
+* Dr. José María Cañas
+
+* Toshan Luktuke
+
+Thank you for your interest, and feel free to reach out via email if you have any questions, comments, or suggestions. I hope you find my work engaging!
