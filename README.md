@@ -12,10 +12,13 @@ My name is Pankaj Borade, and I am a final-year student at Sardar Vallabhbhai Na
 
 This GSoC Project focuses on adding a global block composition feature, resolving nested issues, modifying the current version single dependency codebase to multi-level dependency, implementing two or more demo robotics applications, expanding the block library, automating the testing of Visual Circuit and its documentation using GitHub Actions, and releasing the new version with all issue fixes. The journey from Day 0 to the current progress is illustrated in the [progress blog](https://theroboticsclub.github.io/gsoc2024-Pankaj_Borade/posts/).
 
-Mentors:
+### Mentors
+ - [Dr. José María Cañas](https://github.com/jmplaza)
+ - [Toshan Luktuke](https://github.com/toshan-luktuke)
 
-* Dr. José María Cañas
 
-* Toshan Luktuke
+**Official Repository:** [VisualCircuit](https://github.com/JdeRobot/VisualCircuit/)  
+**Github Issues**: [Summary](https://github.com/JdeRobot/VisualCircuit/issues?q=author%3ABkPankaj+)  
+**Pull Requests:** [Summary](https://github.com/JdeRobot/VisualCircuit/pulls?q=author%3ABkPankaj+)  
 
 Thank you for your interest, and feel free to reach out via email if you have any questions, comments, or suggestions. I hope you find my work engaging!
