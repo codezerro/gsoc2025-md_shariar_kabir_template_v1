@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/" rel="alternate" type="text/html" /><updated>2024-08-22T17:28:42+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml</id><title type="html">GSoC 2024 VisualCircuit Block Library - JdeRobot</title><author><name>Pankaj Keshav Borade</name></author><entry><title type="html">Coding Period Week 10: July 30 ~ Aug 05</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week10/" rel="alternate" type="text/html" title="Coding Period Week 10: July 30 ~ Aug 05" /><published>2024-07-05T00:00:00+05:30</published><updated>2024-07-05T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w10</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week10/"><![CDATA[<p>In the tenth week’s Monday meeting, we discussed progress until the ninth week and outlined the tasks for the upcoming week. The main goal is to perform a robotics application with new nested code. I chose David’s FSM issue for the robotics application. Mentor Dr. José María sent the GitHub link to David’s repository. Several issues arose, and one is still ongoing, which I will discuss in the Challenges section. Through this robotics application, several loose ends were identified, and I resolved them this week. However, one issue remains that I need to address.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/" rel="alternate" type="text/html" /><updated>2024-08-28T11:02:57+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/feed.xml</id><title type="html">GSoC 2024 VisualCircuit Block Library - JdeRobot</title><author><name>Pankaj Keshav Borade</name></author><entry><title type="html">Coding Period Week 10: July 30 ~ Aug 05</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week10/" rel="alternate" type="text/html" title="Coding Period Week 10: July 30 ~ Aug 05" /><published>2024-07-05T00:00:00+05:30</published><updated>2024-07-05T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w10</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week10/"><![CDATA[<p>In the tenth week’s Monday meeting, we discussed progress until the ninth week and outlined the tasks for the upcoming week. The main goal is to perform a robotics application with new nested code. I chose David’s FSM issue for the robotics application. Mentor Dr. José María sent the GitHub link to David’s repository. Several issues arose, and one is still ongoing, which I will discuss in the Challenges section. Through this robotics application, several loose ends were identified, and I resolved them this week. However, one issue remains that I need to address.</p>
 
 <h2 id="goals">Goals</h2>
 <ul class="task-list">
@@ -113,7 +113,210 @@
     <h4 id="single-port-with-multiple-inputoutput-issue">Single port with multiple input/output issue</h4>
     <p>This issue occurred when David’s FSM circuit was created using the composed block feature. In David’s circuit, multiple blocks were attached to a single port. My approach was to use a queue operation to map all blocks, but there were many cases where the number of inputs and outputs was not the same, requiring the creation of extra links. The issue with equal numbers of input/output blocks was resolved using the queue approach.</p>
   </li>
-</ul>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[In the past two weeks, the main task has been to complete the remaining demo and resolve issues that arose along the way. A major issue was with the FSM circuit, where there were multiple inputs and outputs connected to a single port. This issue has been partially resolved; when the number of inputs and outputs is equal, the wires are mapped correctly, but if they are unequal, the issue persists. Another issue was with IDs remaining the same across multiple instances of the same block. This has been resolved using a queue (detailed in the “Achievements and Challenges” section). Additionally, there was a problem where, after pressing the Back button, the model data remained the same, leading to identical IDs for multiple instances. By the end of week 12, the line follower with the composed block feature was successfully solved.]]></summary></entry><entry><title type="html">Coding Period Week 2: June 04 ~ June 10</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week2/" rel="alternate" type="text/html" title="Coding Period Week 2: June 04 ~ June 10" /><published>2024-06-10T00:00:00+05:30</published><updated>2024-06-10T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w2</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week2/"><![CDATA[<p>Welcome to the second week of Coding Week progress. In the Monday meeting, we discussed the minimum tasks required for the midterm evaluation, reviewed the previous tasks, and assigned tasks for the next week. One of the issues in VisualCircuit is that it doesn’t generate internal scripts for nested blocks. This issue prevents the creation of complex robotics applications. To address this, I will be modifying the block composition this week. Additionally, I created a basic frontend test and installation process within GitHub Actions. This week, I will work on the first global test with GitHub Actions.</p>
+</ul>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[In the past two weeks, the main task has been to complete the remaining demo and resolve issues that arose along the way. A major issue was with the FSM circuit, where there were multiple inputs and outputs connected to a single port. This issue has been partially resolved; when the number of inputs and outputs is equal, the wires are mapped correctly, but if they are unequal, the issue persists. Another issue was with IDs remaining the same across multiple instances of the same block. This has been resolved using a queue (detailed in the “Achievements and Challenges” section). Additionally, there was a problem where, after pressing the Back button, the model data remained the same, leading to identical IDs for multiple instances. By the end of week 12, the line follower with the composed block feature was successfully solved.]]></summary></entry><entry><title type="html">Project Summary</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/summary/" rel="alternate" type="text/html" title="Project Summary" /><published>2024-07-05T00:00:00+05:30</published><updated>2024-07-05T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/summary</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/summary/"><![CDATA[<h2 id="project-overview">Project Overview</h2>
+<p>This GSoC project focuses on adding a global block composition feature, resolving nested issues, modifying the current version’s single dependency codebase to a multi-level dependency, implementing two or more demo robotics applications, expanding the block library, automating the testing of VisualCircuit and its documentation using GitHub Actions, and releasing the new version with all issue fixes.</p>
+
+<p>The last 16 weeks have been an incredible and exhilarating journey filled with learning, challenges, and accomplishments. It was a great experience to work on such an exciting project, applying my web development skills to the field of Robotics, a domain I’m deeply passionate about, and learning more about both areas along the way. These past few months were exciting and memorable, with late nights, early mornings, and sometimes not sleeping at all. The joy of completing tasks is hard to describe in words (though my weekly blog attempts to capture some of that emotion).</p>
+
+<p>This entire journey wouldn’t have been possible without the guidance and support of my mentors, Dr. José María Cañas and Toshan Luktuke, whose expertise and dedication were crucial every step of the way.</p>
+
+<p>Thank you to Google for organizing GSoC, and to everyone who has been a part of this journey!</p>
+
+<p>This blog post will be a quick summary of what I worked on during the GSOC period.</p>
+
+<h3 id="mentors">Mentors</h3>
+<ul>
+  <li><a href="https://github.com/jmplaza">Dr. José María Cañas</a></li>
+  <li><a href="https://github.com/toshan-luktuke">Toshan Luktuke</a></li>
+</ul>
+
+<p><strong>Official Repository:</strong> <a href="https://github.com/JdeRobot/VisualCircuit/">VisualCircuit</a><br />
+<strong>Github Issues</strong>: <a href="https://github.com/JdeRobot/VisualCircuit/issues?q=author%3ABkPankaj+">Summary</a><br />
+<strong>Pull Requests:</strong> <a href="https://github.com/JdeRobot/VisualCircuit/pulls?q=author%3ABkPankaj+">Summary</a></p>
+
+<h2 id="goals">Goals</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Developed a CI pipeline using GitHub Actions, including tests for frontend rendering and building a package with the complete architecture.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Introduced a composed block feature to simplify block development.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Modified the current version to support multi-level multi-block dependencies.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Created an autoparking demo with ROS2 and VisualCircuit during the community bonding period.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Resolved the nested block issue, enabling support for creating multi-level blocks.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Fixed the parameter issue for multi-level blocks.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Solving the line follower exercise of Robotics Application with composed feature.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Recreated FSM Circuit and follow person with both single level and nested level.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Developed several new blocks, including Generic PID, Person Detector, and Laser ROS1.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Addressed the issue of identical IDs being assigned to multiple instances.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Fixed the issue where model data remained unchanged when the Back button was pressed.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Resolved the single port with multiple input/output issue when the number of inputs and outputs is the same</li>
+</ul>
+
+<h2 id="demo">Demo</h2>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=xvceQL8AgQ4">Composed and Nested Blocks Feature Demo - v3.6</a></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/watch?v=xvceQL8AgQ4" frameborder="0" allowfullscreen=""></iframe>
+
+<h2 id="community-bonding">Community Bonding</h2>
+<p>The first GSoC meeting with mentors took place on May 6th. This meeting focused on introducing the community and mentors, as well as outlining the tasks for the early weeks of the community bonding period.</p>
+
+<h3 id="key-tasks">Key tasks</h3>
+<ul>
+  <li>Creating a blog website</li>
+  <li>Setting up RoboticsAcademy</li>
+  <li>Understanding the Robotics Application Manager architecture</li>
+  <li>Developing the Laser ROS1 block, solving the autoparking exercise with ROS2 and VisualCircuit</li>
+  <li>Publishing a video on JdeRobot’s YouTube channel</li>
+  <li>Learning about GitHub releases</li>
+</ul>
+
+<p>There was also a meeting with the entire community and GSoC 2024 contributors during the second week of the community bonding period, which provided greater insight into other projects. Additionally, the mentors explained the project goals, including block composition and the nested issue. Although I was initially unclear about this, the explanation made it evident that the issue was crucial, as it impedes users from creating complex applications.</p>
+
+<ul>
+  <li><a href="https://youtu.be/SRSmFSIsZWQ?si=qu_DoqOhfxu3OkGi">Autoparking exercise with VC and ROS2 demo</a></li>
+</ul>
+
+<iframe width="420" height="315" src="https://youtu.be/SRSmFSIsZWQ?si=qu_DoqOhfxu3OkGi" frameborder="0" allowfullscreen=""></iframe>
+
+<h2 id="coding-period">Coding period</h2>
+<p>I initially started with basic tests using GitHub Actions. In the first step of the basic test, I wrote code to install dependencies for both the frontend and backend. I learned GitHub Actions and YAML by observing the CI workflows of other repositories. The CI workflow is triggered whenever there is a pull request to the master branch. After writing the setup code for the CI workflow, I completed a basic frontend test. I encountered a “MODULE NOT FOUND” frontend error because I had stored the node_modules in artifacts. Storing node_modules in artifacts is not ideal since artifacts are typically used for build files. I also modified the blocks in the VisualCircuit resources repository.</p>
+
+<p>CI Workflow tested in forked repo:
+<img src="../assets/images/two.png" alt="two" /></p>
+
+<p>After completing the basic frontend test, I proceeded to the Selenium global test. To prepare, I learned Selenium through documentation and YouTube videos. I chose Selenium because I wanted to check the overall functionality of the VisualCircuit application, which involves importing the .vc3 file and building it. This requires GUI interaction, for which Selenium is well-suited. I used Selenium Chrome Standalone for this purpose. Initially, it took some time to understand Selenium Grid and how to open live sessions. By looking at examples from Google, I learned how to click specific buttons by accessing their HTML elements. The File and Open buttons were clicked through Selenium. I also started working on frontend-side interdependencies. This progress occurred during the initial two weeks of the coding period.</p>
+
+<p>Everything was going according to the timeline. Next, it was time to explore block composition and nested issues. I began by adding the Global Input/Output dialog box. I used two approaches to solve the nested issue, but both were disappointing as blank inter-nested dependencies were still appearing in the .vc3. I completed the remaining part of the global test by uploading the .vc3 file into the Selenium Grid, opening it, and building the file. To upload the .vc3, I tried different approaches such as uploading it through YAML, using Docker commands, and leveraging various Python libraries. Ultimately, pyautogui worked for interacting with the OS within Docker. I also improved the Global Input and Output function for fetching the ports for global input/output. Additionally, I modified the code for dependencies on the frontend side but still encountered the same blank issue.</p>
+
+<p>Selenium based first automated global test:
+<img src="../assets/images/six.gif" alt="" /></p>
+
+<h3 id="global-input-output">Global Input Output</h3>
+<p>At the end of week four, I had touched on all the tasks I needed to do during the coding period. The progress in automated testing was great as Selenium and frontend tests are good for testing the whole architecture of VisualCircuit. Also, the global input/output dialog box was in great shape. However, the nested dependencies still had issues, and the solution seemed more complex, so my mentors and I decided to leave this task for now and continue it in the coming weeks. Let’s start the story of block composition. I took it into my hands when Dr. Jose Maria explained the details and issues regarding block composition during the second week of the coding period meeting. The main goal is to improve efficiency and make VisualCircuit easy to use, generating and using composed blocks without any time delay. As I stated earlier, my first approach was to create a user interface for selecting the input/output that needed to be exposed to external blocks. After that, there will be processing for generating the .vc3 as per the user without disturbing the current circuit on the screen. The issues and challenges were discussed in weekly blogs, so please refer to that for more details.</p>
+
+<ul>
+  <li>
+    <h4 id="block-dialog-box-and-fetching-ports">Block Dialog Box and fetching ports</h4>
+    <p>I referenced the “Edit Information” option as I needed a somewhat similar dialog box. So I replicated that, and now the blank dialog box was ready; it was time to fetch all the details, put them in, and let the user select them. For fetching ports, I created a function in editor.tsx that iterates over all blocks in the model and extracts the port names and types with IDs. After fetching the data, it was time to put all the fetched data in the dialog box with checkboxes, but before that, VisualCircuit has some cases to consider to ensure proper user access.</p>
+
+    <p>Global ports selection dialog box:
+<img src="../assets/images/tweleve.png" alt="" /></p>
+  </li>
+  <li>
+    <h5 id="possible-cases">Possible cases</h5>
+    <ul>
+      <li>The global input port should not link to the block’s port whose link is present with another block. This protects against double data issues on the block side.</li>
+      <li>The global output port can be attached to the block’s port in any case, whether there is a wire present or not. The aim is to allow the global output port to be used for debugging.</li>
+      <li>No internal wires should be removed if global input/output is used in between the circuit.</li>
+    </ul>
+  </li>
+  <li>
+    <h5 id="processing">Processing</h5>
+    <p>Once the user selects the respective port and clicks OK, the processing begins. First, all selected ports are fetched and processed in a specific order so that one variable can be used to fetch data. After this, processData is used to create new links for input and output. A new global input/output block is generated, and the block’s position and node are added with canvas repainting. After this, the new link and block type are checked, and the blocks are linked as source and target accordingly. This process is repeated for each global input/output until all are processed. Then, the .vc3 file is generated with all the changes. Before processing, the model was saved in a stack so it could be retrieved after completion, and the whole canvas is repainted with all models kept the same. This way, the current circuit is not disturbed. This process reduces the time for building the circuit; previously, all linking blocks and creating were manual with disturbance in the circuit. So, in one way, the whole process is automated without disturbing the current work.</p>
+  </li>
+</ul>
+
+<h3 id="composed-block-and-nested-issue">Composed Block and nested issue</h3>
+<p>The global input/output feature was unable to generate internal nested dependencies, leading to a significant issue. I discovered this around week 7 when I created a line follower demo with composed blocks. Let’s delve deeper into the composed block and nested issue. I continued working on the same approach from week 3, but it resulted in the same blank dependencies. I then had a meeting with my mentors to discuss how to proceed with this issue. Dr. Jose Maria gave an example of an encoder and decoder that relates frontend and backend processing. So I started with the basics from scratch.</p>
+
+<ul>
+  <li>
+    <h5 id="blank-dependencies-in-vc3">Blank dependencies in .vc3</h5>
+    <p>The blank dependencies in the design section were due to the frontend encoding, confirming that there was no issue with synthesis.py. I then revisited my previous solution and included proper recursion for obtaining all nested dependencies. The solution is quite similar to the graph DFS algorithm, but this was my first time implementing it in a real-life application. However, there was still an issue after this modification. I found that the interfaces for Block and Dependency were not properly defined, which led to the blank object. So, I modified converter.ts and interface.ts. Yes! It worked! The issue was very small but quite complex. The recursion method now goes into every block and its dependencies, which was missing in the week 3 approach.</p>
+  </li>
+</ul>
+
+<p>Nested dependencies in .vc3 .json file Level 2:
+<img src="../assets/images/fourteen.png" alt="" /></p>
+
+<ul>
+  <li>
+    <h5 id="python-scripts-in-modules-directory-issue">Python Scripts in modules directory issue</h5>
+    <p>After resolving the blank dependencies, the next issue was the absence of Python scripts in the modules directory. This required modification on the backend side. Specifically, in synthesis.py, all nested blocks should be iterated to generate the Python files. The process involves iterating through design, dependencies, and again design dependencies, ensuring that no block is left out.</p>
+  </li>
+</ul>
+
+<p>Modules directory with all nested python files:
+<img src="../assets/images/sixteen.png" alt="" /></p>
+
+<ul>
+  <li>
+    <h5 id="blocks-and-wires-missing-in-datajson-issue">Blocks and wires missing in data.json issue</h5>
+    <p>The above iteration is sufficient for creating JSON block objects as it iterates over each one. Wires are also appended similarly to block iteration. But there was a catch… blocks were not linking properly to wires as the path between (block - global input/output - block) is present in the composed circuit, whereas the data.json contained details of blocks, not the global part, and that wire should be mapped directly. Additionally, if there are two or more levels, then two or more global wires must be mapped properly. The error was primarily due to Input or Output not being present, as main.py takes all wire links for data transfers since they run in each block as one process. So, the process would get stuck at those errors, requiring proper mapping.</p>
+  </li>
+</ul>
+
+<p>Before modification of nested issue - data.json:
+<img src="../assets/images/twentyone.png" alt="" /></p>
+
+<ul>
+  <li>
+    <h5 id="filtering-and-mapping">Filtering and mapping</h5>
+    <p>Not only wires but blocks need to be filtered, as there can be other block types—only code blocks should be appended. Additionally, the dependency blocks should not be appended; only the internal code needs to be appended. All these modifications were made on the block side by adding a condition for the block type in the previous iteration.</p>
+  </li>
+</ul>
+
+<p>After modification of nested issue - data.json:
+<img src="../assets/images/twentytwo.png" alt="" /></p>
+
+<p>The main issue now was filtering and mapping the wires, which required more recursive iteration. I performed the iteration until no global-type package block wires remained. In the first iteration, I stored the opposite of the global wire to be retained while making the particular global wire’s source/target absent. In the second iteration, I looked for the same type of ID with the previous global ID and replaced the opposite source/target. If the opposite of the global wire was initially global, it was not deleted; otherwise, it was removed. These iterations continued until the above condition was met. This is a brief logic; you can visit the weekly blog for more details.</p>
+
+<ul>
+  <li>
+    <h5 id="modification-from-single-block-dependency-to-multi-level-multi-code-dependency">Modification from Single Block Dependency to Multi-Level Multi-Code Dependency</h5>
+    <p>After mapping, the next issue that arose was handling multiple code blocks within dependencies, as the existing blocks weren’t able to map correctly. This problem stemmed from the current version being designed for single block dependency. To resolve this, I converted the composition so that higher-level blocks were not stored in data.json. Instead, I transformed the higher-level blocks into a single level before appending them to data.json. There were many errors related to IDs because, in the initial version, the dependency ID was attached to every block, making it impossible to retrieve all blocks of a dependency. I modified this by using the ID of the basic-level block and mapping only those.</p>
+  </li>
+  <li>
+    <h5 id="parameter-issue">Parameter issue</h5>
+    <p>During this time, another two weeks had passed, and the nested issue was still in the solving phase. The problem occurred when dependency internal blocks contained parameters, as the parameter ID was linked to the dependency type ID. This was removed in the new modification. Adding the parameters is important because many blocks, such as ROSTopic, Kp, Ki, etc., use parameters. So, new IDs were assigned to the parameters and linked through the source-target method. Before settling on this approach, I initially tried assigning types to avoid changing the parameter ID, but that approach was not feasible for more than two parameters within a dependency.</p>
+  </li>
+</ul>
+
+<p>Parameter issue:
+<img src="../assets/images/twentynine.png" alt="" /></p>
+
+<h4 id="issue-of-identical-ids-across-multiple-instances-of-the-same-block">Issue of identical IDs across multiple instances of the same block</h4>
+<p>This issue was unexpected but occurred when using two identical blocks. It became apparent that users might want to use two or more identical blocks at any level of a circuit. The problem was encountered when using two PID blocks for the line follower demo. In data.json, only one PID block was being recorded because basic.code had the same ID, causing it to replace the previous block’s value. To fix this, I modified the IDs of blocks randomly during the loadPackage function and mapped them in the wires accordingly. It took one iteration to modify the block IDs and another to change the respective wire IDs to match the newly assigned block IDs. This approach worked, but when I tried to modify the value inside a package block, the same issue resurfaced. The problem was that the editor layer stored in the stack by the Back function was not modified in the previous iteration, so I added an extra iteration for the layers. Booyah! It worked.</p>
+
+<h4 id="other-issues">Other Issues</h4>
+<p>Apart from these major issues, several other challenges arose, which I explained in more detail in my weekly blog. The above explanations provide a high-level overview, but for in-depth details, please refer to the weekly blog.</p>
+
+<h4 id="new-blocks-and-demos">New Blocks and Demos</h4>
+<p>I developed the Laser ROS1 block during the community bonding period, along with the Generic PID Block and the Person Detector block, which takes an input image and outputs the image with detected boxes, including objects and probability, person detection, and xy, wh values. Additionally, I worked on the Auto-parking with ROS2 and VisualCircuit during the community bonding period. During the coding period, I recreated the line follower, FSM circuit with composed, and single-level circuit.</p>
+
+<p>Composed circuit of line follower:
+<img src="../assets/images/thirtyone.png" alt="" /></p>
+
+<p>Internal perception composed block:
+<img src="../assets/images/thirtytwo.png" alt="" /></p>
+
+<h3 id="after-gsoc">After GSoC</h3>
+<p>I see this as just the beginning of my contributions to JdeRobot, and I look forward to contributing not only to VisualCircuit but also to other projects. There are several areas I have observed that I would like to work on, including:</p>
+
+<ul>
+  <li>Addressing loose ends from the GSoC work, such as resolving the multiple block single port issue in the composed block feature and other related issues.</li>
+  <li>Making the CI workflow more robust and solving the Selenium URL issue in GitHub Actions.</li>
+  <li>Improving and integrating Dockerization of the Robotics Backend in VisualCircuit.</li>
+  <li>Exploring the management of multiple hardware blocks, such as cameras, within a single circuit (e.g., one in a composed block and another at a higher level), and developing strategies for this.</li>
+  <li>Developing more real-life robotics applications with VisualCircuit.</li>
+</ul>
+
+<h3 id="extra-images">Extra Images</h3>
+
+<p>First meeting with mentors screenshot: 
+<img src="../assets/images/meetone.jpg" alt="Firstmeet" /></p>
+
+<p>First meeting with JdeRobot community screenshot: 
+<img src="../assets/images/meettwo.jpg" alt="Firstmeet" /></p>
+
+<p>Week 5 meeting screenshot: 
+<img src="../assets/images/thirtyfour.png" alt="Firstmeet" /></p>
+
+<p>Week 12 meeting screenshot: 
+<img src="../assets/images/thirtyfive.png" alt="Firstmeet" /></p>
+
+<p>Person Detector Block testing: 
+<img src="../assets/images/thirtysix.png" alt="Firstmeet" /></p>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[Project Overview This GSoC project focuses on adding a global block composition feature, resolving nested issues, modifying the current version’s single dependency codebase to a multi-level dependency, implementing two or more demo robotics applications, expanding the block library, automating the testing of VisualCircuit and its documentation using GitHub Actions, and releasing the new version with all issue fixes.]]></summary></entry><entry><title type="html">Coding Period Week 2: June 04 ~ June 10</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week2/" rel="alternate" type="text/html" title="Coding Period Week 2: June 04 ~ June 10" /><published>2024-06-10T00:00:00+05:30</published><updated>2024-06-10T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w2</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week2/"><![CDATA[<p>Welcome to the second week of Coding Week progress. In the Monday meeting, we discussed the minimum tasks required for the midterm evaluation, reviewed the previous tasks, and assigned tasks for the next week. One of the issues in VisualCircuit is that it doesn’t generate internal scripts for nested blocks. This issue prevents the creation of complex robotics applications. To address this, I will be modifying the block composition this week. Additionally, I created a basic frontend test and installation process within GitHub Actions. This week, I will work on the first global test with GitHub Actions.</p>
 
 <h2 id="goals">Goals</h2>
 <ul class="task-list">
@@ -447,110 +650,4 @@ Selenium based first automated global test:</p>
   <li><a href="https://github.com/JdeRobot/VisualCircuit/commit/a367ffb4f22dd3b2396633ef6e909108777e0376">https://github.com/JdeRobot/VisualCircuit/commit/a367ffb4f22dd3b2396633ef6e909108777e0376</a></li>
   <li><a href="https://github.com/JdeRobot/VisualCircuit/commit/3afffd77ab40766c36ebbbcb1bb603feb38b70eb">https://github.com/JdeRobot/VisualCircuit/commit/3afffd77ab40766c36ebbbcb1bb603feb38b70eb</a></li>
   <li><a href="https://github.com/JdeRobot/VisualCircuit/commit/91ae5f1a8b4abe80ce3c2edf128467f6376f4644">https://github.com/JdeRobot/VisualCircuit/commit/91ae5f1a8b4abe80ce3c2edf128467f6376f4644</a></li>
-</ol>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[During our Monday meeting, we discussed the progress I made on the nested and composed block issue and outlined what needs to be achieved in the upcoming weeks. Essentially, there were two main goals for this week, but the nested issue had many internal problems. In the current version, dependencies could only have a single code block, and wires and blocks were created for whole dependencies. If there were multiple codes, it would only take one code block and generate the data.json. Therefore, I also needed to fix this and make all links and blocks from multiple levels into a single layer in the backend processing. This is why resolving the nested issue took more time. Additionally, there were many errors that came up during the process, which further delayed progress. However, by the end of the week, the entire nested issue was resolved.]]></summary></entry><entry><title type="html">Coding Period Week 1: May 27 ~ June 03</title><link href="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week1/" rel="alternate" type="text/html" title="Coding Period Week 1: May 27 ~ June 03" /><published>2024-06-03T00:00:00+05:30</published><updated>2024-06-03T00:00:00+05:30</updated><id>http://localhost:4000/gsoc2024-Pankaj_Borade/code-w1</id><content type="html" xml:base="http://localhost:4000/gsoc2024-Pankaj_Borade/coding-week1/"><![CDATA[<p>From here onwards Coding period begins, During the Monday meeting, mentors discussed the blocks in VisualCircuit resources and initial tests with GitHub Actions. Additionally, I had some doubts about the VC resources repository, which were clarified by the mentors.</p>
-
-<h2 id="goals">Goals</h2>
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Add basic test with Github Actions.</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Modify and add the blocks in VisualCircuit resources.</li>
-</ul>
-
-<h2 id="accomplishment-and-challenges">Accomplishment and Challenges</h2>
-
-<ul>
-  <li>
-    <h4 id="first-yaml-file-for-github-actions">First yaml file for Github Actions</h4>
-    <p>First of all, it was my first time writing a YAML file for GitHub Actions. I used resources such as YouTube videos [1] and GitHub Actions documentation [2]  to help me write the initial script. From the discussions, it was clear that testing should trigger when there is a pull request to the master branch, so I started with that and followed the VisualCircuit documentation for the frontend installation.</p>
-  </li>
-</ul>
-
-<p>First failure of coding period:</p>
-
-<p><img src="../assets/images/one.png" alt="one" /></p>
-
-<ul>
-  <li>
-    <h4 id="creating-workflow-for-installation-process">Creating workflow for installation process</h4>
-    <p>The initial idea was to create a separate workflow for the installation process. This installation workflow would be reused for every test and other workflows. I worked on this and resolved the above issue by including ‘–legacy-peer-deps’ at the end of the ‘npm install’ command.</p>
-  </li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: Install and Build
-
-on:
-  pull_request:
-    branches:
-      - <span class="s1">'master'</span>
-
-<span class="nb">jobs</span>:
-  <span class="nb">install</span>:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: <span class="s1">'16'</span>
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: <span class="s1">'3.x'</span> 
-
-      - name: Install NPM dependencies
-        working-directory: frontend
-        run: npm <span class="nb">install</span> <span class="nt">--legacy-peer-deps</span>
-
-      - name: Create virtual environment
-        run: python <span class="nt">-m</span> venv .venv
-
-      - name: Activate virtual environment
-        run: <span class="nb">source</span> .venv/bin/activate
-
-      - name: Install dependencies
-        run: |
-          python <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
-          pip <span class="nb">install</span> <span class="nt">-r</span> backend/requirements.txt
-      - name: Add .env file
-        run: <span class="nb">cp </span>backend/.env.template backend/.env
-
-      - name: Generate static files
-        run: python backend/manage.py collectstatic
-</code></pre></div></div>
-<ul>
-  <li>
-    <h4 id="research-and-modifying-the-workflow">Research and modifying the workflow</h4>
-    <p>I reviewed some open source projects such as RocketChat and Volto by the Plone Foundation to understand the CI pipeline workflow. I realized that creating a separate workflow for installation is uncommon and not a best practice. Instead, I created a setup job and stored the results in artifacts for use in different tests (jobs).</p>
-  </li>
-</ul>
-
-<p>Initially, I encountered a “MODULE NOT FOUND” frontend error because I stored node modules in artifacts. Storing node modules in artifacts is not ideal since artifacts are typically used for build files. Stack Overflow and GitHub Actions documentation [3] suggested using Action Cache instead. After switching to Action Cache, the issue was resolved, and I proceeded to the next step of basic frontend testing.</p>
-
-<ul>
-  <li>
-    <h4 id="ci-workflow-with-basic-frontend-test">CI Workflow with basic frontend test</h4>
-    <p>For basic frontend testing, I researched Jest and React testing frameworks commonly used for unit tests on the React side. I used prebuilt React tests and initially printed the rendered HTML in the terminal. Based on this, I identified the menubar elements and added a basic test to find and verify that the “File” text is present in the rendered App.</p>
-  </li>
-</ul>
-
-<p>CI Workflow tested in forked repo:</p>
-
-<p><img src="../assets/images/two.png" alt="two" /></p>
-
-<h2 id="prs-created">PRs created</h2>
-<ol>
-  <li><a href="https://github.com/JdeRobot/VisualCircuit/pull/306">https://github.com/JdeRobot/VisualCircuit/pull/306</a></li>
-  <li><a href="https://github.com/JdeRobot/VisualCircuit/pull/307">https://github.com/JdeRobot/VisualCircuit/pull/307</a></li>
-  <li><a href="https://github.com/JdeRobot/VisualCircuit/pull/308">https://github.com/JdeRobot/VisualCircuit/pull/308</a></li>
-  <li><a href="https://github.com/JdeRobot/VisualCircuit/pull/309">https://github.com/JdeRobot/VisualCircuit/pull/309</a></li>
-</ol>
-
-<h2 id="resources">Resources</h2>
-<ol>
-  <li><a href="https://www.youtube.com/playlist?list=PL9ok7C7Yn9A-6uidd3RXZPf5EfhxkPXa_">https://www.youtube.com/playlist?list=PL9ok7C7Yn9A-6uidd3RXZPf5EfhxkPXa_</a></li>
-  <li><a href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions">https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions</a></li>
-  <li><a href="https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows">https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows</a></li>
-</ol>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[From here onwards Coding period begins, During the Monday meeting, mentors discussed the blocks in VisualCircuit resources and initial tests with GitHub Actions. Additionally, I had some doubts about the VC resources repository, which were clarified by the mentors.]]></summary></entry></feed>
+</ol>]]></content><author><name>Pankaj Keshav Borade</name></author><category term="Blog" /><summary type="html"><![CDATA[During our Monday meeting, we discussed the progress I made on the nested and composed block issue and outlined what needs to be achieved in the upcoming weeks. Essentially, there were two main goals for this week, but the nested issue had many internal problems. In the current version, dependencies could only have a single code block, and wires and blocks were created for whole dependencies. If there were multiple codes, it would only take one code block and generate the data.json. Therefore, I also needed to fix this and make all links and blocks from multiple levels into a single layer in the backend processing. This is why resolving the nested issue took more time. Additionally, there were many errors that came up during the process, which further delayed progress. However, by the end of the week, the entire nested issue was resolved.]]></summary></entry></feed>
