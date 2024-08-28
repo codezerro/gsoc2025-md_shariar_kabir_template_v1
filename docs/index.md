@@ -31,6 +31,8 @@ This GSoC Project focuses on adding a global block composition feature, resolvin
  - [Toshan Luktuke](https://github.com/toshan-luktuke)
 
 
-**Official Repository:** [VisualCircuit](https://github.com/JdeRobot/VisualCircuit/)  
-**Github Issues**: [Summary](https://github.com/JdeRobot/VisualCircuit/issues?q=author%3ABkPankaj+)  
-**Pull Requests:** [Summary](https://github.com/JdeRobot/VisualCircuit/pulls?q=author%3ABkPankaj+)  
+**Official Repository:** [VisualCircuit](https://github.com/JdeRobot/VisualCircuit/) <br>
+**Project Summary:** [🔍 Explore Summary](https://theroboticsclub.github.io/gsoc2024-Pankaj_Borade/summary/) <br>
+**About:** [ℹ️ Explore About](https://theroboticsclub.github.io/gsoc2024-Pankaj_Borade/About/) <br>
+**Github Issues**: [View Issues](https://github.com/JdeRobot/VisualCircuit/issues?q=author%3ABkPankaj+) <br>
+**Pull Requests:** [See Pull Requests](https://github.com/JdeRobot/VisualCircuit/pulls?q=author%3ABkPankaj+) <br>
